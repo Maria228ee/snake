@@ -1,4 +1,5 @@
 import random
+
 import pygame
 
 SCREEN_WIDTH = 640
@@ -149,8 +150,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-
-
-if __name__ == "__main__":
     main()
