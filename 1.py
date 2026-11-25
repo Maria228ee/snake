@@ -1,7 +1,6 @@
 import random
 import tkinter as tk
 
-# Константы игры
 SCREEN_WIDTH = 640
 SCREEN_HEIGHT = 480
 GRID_SIZE = 20
@@ -12,9 +11,8 @@ SNAKE_COLOR = "green"
 APPLE_COLOR = "red"
 CENTER_POSITION = (SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
 FPS = 20
-DELAY = 1000 // FPS  # задержка в миллисекундах
+DELAY = 1000 // FPS  
 
-# Направления движения
 UP = (0, -GRID_SIZE)
 DOWN = (0, GRID_SIZE)
 LEFT = (-GRID_SIZE, 0)
@@ -155,12 +153,10 @@ def main():
             snake.length += 1
             apple.randomize_position(snake.positions)
 
-        # Проверка самоукуса
         if snake.get_head_position() in snake.positions[1:]:
             snake.reset(canvas)
             apple.randomize_position(snake.positions)
 
-        # Отрисовка
         snake.draw(canvas)
         apple.draw(canvas)
 
